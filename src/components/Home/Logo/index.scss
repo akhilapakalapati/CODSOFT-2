@@ -1,0 +1,13 @@
+/* App.css */
+.logo {
+    /* Set initial styles for the logo */
+    width: 100px; /* Adjust the size to your preference */
+    height: 100px;
+    transition: transform 1s ease; /* Define the animation property and duration */
+    border-radius: 20px;
+  }
+  
+  .logo:hover {
+    transform: rotate(360deg); /* Add the desired animation, in this case, a 360-degree rotation */
+  }
+  
