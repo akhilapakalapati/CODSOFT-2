@@ -1,8 +1,10 @@
+import Loader from 'react-loaders';
 import './index.scss';
 
 
 const Logo=()=>{
     return (
+      <>
       <div className="App">
       <img
         src="https://img.freepik.com/premium-vector/vector-watercolor-colorful-flower-bouquet_633622-362.jpg?w=740" // Replace with your image URL
@@ -12,6 +14,8 @@ const Logo=()=>{
       <div>  
 </div>
     </div>
+    <Loader  type="line-spin-fade-loader"/>
+    </>
       );
 }
 

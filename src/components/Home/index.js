@@ -42,8 +42,8 @@ const Home = () =>{
                 <h2>MERN stack developer</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
-            <Logo/>
-            <div>    
+            <div className='resume'> 
+            <Logo/>   
             <Resume/>
                </div>
         </div>
