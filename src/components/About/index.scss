@@ -23,17 +23,32 @@
         width:200px;
         height: 200px;
         border:1px solid #ccc;
-        background: rgba(255,255,255,0.4);
+        background: rgba(255, 255, 255, 0.4);
         text-align: center;
-        font-size: 100;
+        font-size: 100px;
         display:flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 0 20px 0px lightyellow;
+        box-shadow: 0 0 20px 0px rgb(233, 188, 212);
     }
 
     .face1{
-        transform: translateZ();
+        transform: translateZ(100px);
+    }
+    .face2{
+        transform: rotateY(90deg) translateZ(100px);
+    }
+    .face3{
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+    .face4{
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+    .face5{
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+    .face6{
+        transform: rotateX(-90deg) translateZ(100px);
     }
 }
 
@@ -56,5 +71,55 @@
     }
     83%{
         transform: rotateX(-90deg) ;
+    }
+}
+
+.text-zone{
+   ul{
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+   } 
+}
+
+
+@media screen and (max-width: 767px) {
+    .cubespinner {
+        animation-name: spincube;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 12s;
+        transform-style: preserve-3d;
+        transform-origin: 75px 75px 0; // Adjusted transform-origin for the larger cube
+        margin-left: calc(50% - 75px); // Adjusted margin-left for centering the larger cube
+
+        div {
+            height: 40px; /* Increased height */
+            width: 40px; /* Increased width */
+            font-size: 20px; /* Increased font size */
+            box-shadow: 0 0 20px 0px rgb(233, 188, 212); // Adjusted box shadow for better visualization
+            position: absolute;
+        }
+
+        .face1 {
+            transform: translateZ(20px); // Adjusted translateZ for the larger cube
+        }
+        .face2 {
+            transform: rotateY(90deg) translateZ(20px);
+        }
+        .face3 {
+            transform: rotateY(90deg) rotateX(90deg) translateZ(20px);
+        }
+        .face4 {
+            transform: rotateY(180deg) rotateZ(90deg) translateZ(20px);
+        }
+        .face5 {
+            transform: rotateY(-90deg) rotateZ(90deg) translateZ(20px);
+        }
+        .face6 {
+            transform: rotateX(-90deg) translateZ(20px);
+        }
     }
 }

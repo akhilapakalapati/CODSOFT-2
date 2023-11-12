@@ -1,4 +1,12 @@
 .home-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .resume{
+        margin-left: 50%;
+    }
+
     .text-zone{
         position: absolute;
         left:10%;
@@ -72,4 +80,22 @@
             color:#333;
         }
     }
+}
+
+@media screen and (max-width: 767px) {
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .text-zone{
+           margin:40px;
+        }   
+
+        h1{
+            font-size: 16px;
+        }
+    }
+    
 }
